@@ -1,5 +1,5 @@
 
-const cardsAttach = document.querySelector('.cards');
+const cards = document.querySelector('.cards');
 
 
 /* Step 1: using axios, send a GET request to the following URL 
@@ -13,7 +13,7 @@ axios.get('https://api.github.com/users/jethanh')
     console.log(response.data);
     const userData = response.data;
     
-    cardsAttach.appendChild(createUserCard(userData));
+    cards.appendChild(createUserCard(userData));
     
   })
 
@@ -52,7 +52,7 @@ instructors.forEach(item => {
 
       const userData = response.data;
 
-      cardsAttach.appendChild(createUserCard(userData));
+      cards.appendChild(createUserCard(userData));
     })
 
     .catch(error => {
